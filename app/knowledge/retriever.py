@@ -1,7 +1,10 @@
+"""
+Chroma-based retriever using Chroma's built-in default embedding function.
+No torch / sentence-transformers dependency (keeps deploy lightweight).
+"""
 from typing import List, Dict, Any
 import chromadb
-from chromadb.utils import embedding_functions
-from app.config import CHROMA_DIR, EMBED_MODEL, DATA_DIR
+from app.config import CHROMA_DIR, DATA_DIR
 
 _client = None
 _collection = None
@@ -11,8 +14,7 @@ def _get_collection():
     if _collection is not None:
         return _collection
     _client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-    ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
-    _collection = _client.get_or_create_collection("darukaa_corpus", embedding_function=ef)
+    _collection = _client.get_or_create_collection("darukaa_corpus")
     if _collection.count() == 0:
         _ingest()
     return _collection
