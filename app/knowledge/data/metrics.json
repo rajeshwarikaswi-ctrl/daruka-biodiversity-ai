@@ -1,0 +1,10 @@
+{
+  "soil_organic_carbon_pct": {"label": "Soil organic carbon (%)", "unit": "%", "healthy_min": 1.5, "direction": "higher_better"},
+  "soil_ph": {"label": "Soil pH", "unit": "pH", "healthy_min": 6.0, "healthy_max": 7.5, "direction": "band"},
+  "soil_moisture": {"label": "Soil moisture (vol %)", "unit": "%", "healthy_min": 20, "direction": "higher_better"},
+  "rainfall_mm_annual": {"label": "Annual rainfall (mm)", "unit": "mm", "healthy_min": 400, "direction": "higher_better"},
+  "temperature_c_avg": {"label": "Mean temperature (C)", "unit": "C", "direction": "band"},
+  "species_richness": {"label": "Species richness (count)", "unit": "n", "direction": "higher_better"},
+  "pollution_index": {"label": "Pollution index (0-1)", "unit": "idx", "direction": "lower_better"},
+  "deforestation_rate_pct": {"label": "Deforestation rate (%/yr)", "unit": "%", "direction": "lower_better"}
+}

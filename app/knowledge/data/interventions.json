@@ -1,0 +1,109 @@
+[
+  {
+    "id": "legume_cover_crop",
+    "action": "Introduce legume-based cover crops (e.g. vetch, clover, cowpea) in rotation",
+    "rationale": "Legumes fix atmospheric N2 via rhizobia symbiosis, adding 40-120 kg N/ha/yr; root exudates and residue decomposition feed soil microbial communities, raising labile carbon pools. Flowering legumes also provide forage for pollinators.",
+    "impacted_metrics": ["soil_organic_carbon_pct", "soil_moisture", "species_richness"],
+    "effect_estimates": {
+      "soil_organic_carbon_pct": "+15-25% over 2-3 years",
+      "pollinator_visits": "+30-60%"
+    },
+    "time_horizon": "medium",
+    "references": [
+      "FAO (2015). Soil Organic Carbon: The Hidden Potential.",
+      "IPCC (2019). Climate Change and Land, Ch. 6.",
+      "Poeplau & Don (2015). Agric. Ecosyst. Environ. 200:33-41."
+    ],
+    "applies_when": {
+      "soil_organic_carbon_pct": {"max": 1.0},
+      "rainfall_mm_annual": {"min": 250}
+    }
+  },
+  {
+    "id": "agroforestry_intercrop",
+    "action": "Establish agroforestry / alley cropping with native N-fixing trees (e.g. Faidherbia albida, Gliricidia)",
+    "rationale": "Deep-rooted trees lift nutrients from subsoil, create litter-driven carbon accrual, buffer microclimate (reducing evapotranspiration), and form habitat corridors that raise bird/insect species richness in fragmented landscapes.",
+    "impacted_metrics": ["soil_organic_carbon_pct", "soil_moisture", "species_richness", "temperature_c_avg"],
+    "effect_estimates": {
+      "soil_organic_carbon_pct": "+0.2-0.5% absolute over 5-10 yrs",
+      "species_richness": "+20-40% in 5 yrs"
+    },
+    "time_horizon": "long",
+    "references": [
+      "IPCC (2019). Climate Change and Land, Ch. 5.",
+      "FAO (2013). Advancing Agroforestry on the Policy Agenda.",
+      "Nair (2011). Agroforestry Systems 84:269-285."
+    ],
+    "applies_when": {
+      "region": {"includes": ["semi-arid", "arid", "tropical"]}
+    }
+  },
+  {
+    "id": "riparian_buffer",
+    "action": "Restore 10-30 m riparian buffer strips with native woody species",
+    "rationale": "Buffers intercept nutrient/sediment runoff, lowering stream N/P loading and pollution index; rooted banks stabilise hydrology, improving water availability for aquatic and terrestrial species.",
+    "impacted_metrics": ["pollution_index", "species_richness", "soil_moisture"],
+    "effect_estimates": {
+      "nitrogen_runoff": "-30-60%",
+      "aquatic_species_richness": "+15-50%"
+    },
+    "time_horizon": "medium",
+    "references": [
+      "Mayer et al. (2007). J. Environ. Qual. 36:871-882.",
+      "FAO (2018). Sustainable Land Management."
+    ],
+    "applies_when": {}
+  },
+  {
+    "id": "ph_lime_amendment",
+    "action": "Apply agricultural lime to raise soil pH into the 6.0-7.0 target band",
+    "rationale": "Correcting acidity increases cation exchange capacity, unlocks P and Mo, and enables rhizobia and earthworm activity that underpin nutrient cycling and soil structure.",
+    "impacted_metrics": ["soil_ph", "soil_organic_carbon_pct"],
+    "effect_estimates": {"soil_ph": "+0.5-1.5 units in 1 season"},
+    "time_horizon": "short",
+    "references": [
+      "Havlin et al. (2016). Soil Fertility and Fertilizers, 8th ed.",
+      "FAO (2006). Plant Nutrition for Food Security."
+    ],
+    "applies_when": {"soil_ph": {"max": 5.5}}
+  },
+  {
+    "id": "reduce_tillage",
+    "action": "Transition to no-till / reduced tillage with residue retention",
+    "rationale": "Reduces oxidative loss of soil organic carbon, preserves fungal hyphal networks (mycorrhizae) that mediate plant nutrient uptake, and lowers CO2 efflux.",
+    "impacted_metrics": ["soil_organic_carbon_pct", "soil_moisture"],
+    "effect_estimates": {"soil_organic_carbon_pct": "+0.1-0.3% abs. over 5 yrs"},
+    "time_horizon": "medium",
+    "references": [
+      "IPCC (2019). Climate Change and Land, Ch. 5.",
+      "Six et al. (2002). Plant & Soil 241:155-176."
+    ],
+    "applies_when": {}
+  },
+  {
+    "id": "pollinator_hedgerows",
+    "action": "Plant native flowering hedgerows along field margins",
+    "rationale": "Provides continuous pollen/nectar resources and nesting habitat, increasing wild bee and hoverfly abundance, and improves pollination services in adjacent crops.",
+    "impacted_metrics": ["species_richness"],
+    "effect_estimates": {"wild_bee_richness": "+25-50% within 2 yrs"},
+    "time_horizon": "short",
+    "references": [
+      "Dicks et al. (2015). IPBES Pollinators Assessment.",
+      "Garibaldi et al. (2014). Proc. R. Soc. B 281:20141299."
+    ],
+    "applies_when": {}
+  },
+  {
+    "id": "reforest_native",
+    "action": "Reforest degraded patches with locally native mixed species (not monoculture)",
+    "rationale": "Mixed-species native planting maximises habitat structural diversity, restores functional guilds (frugivores, insectivores), and accrues carbon in biomass and soil.",
+    "impacted_metrics": ["species_richness", "soil_organic_carbon_pct", "deforestation_rate_pct"],
+    "effect_estimates": {"species_richness": "+40-80% over 10 yrs"},
+    "time_horizon": "long",
+    "references": [
+      "IPBES (2019). Global Assessment on Biodiversity.",
+      "Chazdon (2008). Science 320:1458-1460."
+    ],
+    "applies_when": {"deforestation_rate_pct": {"min": 0.5}}
+  }
+]
